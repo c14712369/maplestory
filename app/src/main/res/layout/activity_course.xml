@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="440dp"
+    android:padding="20dp"
+    android:layout_height="fill_parent">
+
+    <EditText
+        android:id="@+id/csInput"
+        android:layout_width="320dp"
+        android:layout_marginStart="45dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:autofillHints="creditCardExpirationDate"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:hint="請輸入課程名稱"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:text=""
+        android:textColor="@color/red"
+        android:id="@+id/warningText"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/frequency"
+        android:text="頻率"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/Monday"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1.6"
+            android:layout_width="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_height="wrap_content"
+            android:text="一" />
+
+        <CheckBox
+            android:id="@+id/Tuesday"
+            android:layout_weight="1.6"
+            android:layout_width="0dp"
+            android:layout_marginTop="7dp"
+            android:layout_height="wrap_content"
+            android:text="二" />
+        <CheckBox
+            android:id="@+id/Wednesday"
+            android:layout_weight="1.6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="三" />
+
+        <CheckBox
+            android:id="@+id/Thursday"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1.6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="四" />
+
+        <CheckBox
+            android:id="@+id/Friday"
+            android:layout_marginTop="7dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.6"
+            android:text="五"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <CheckBox
+            android:id="@+id/Saturday"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1.6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="六" />
+        <CheckBox
+            android:id="@+id/Sunday"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1.6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="日"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:text=""
+        android:id="@+id/warningText2"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timePeriod"
+        android:text="上課時段"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/startTime"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#3E6ECF"
+            android:onClick="picktime"
+            android:text="08:10"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/endTime"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#3E6ECF"
+            android:onClick="picktime01"
+            android:text="09:00"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/semester"
+        android:text="學期始末"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="25dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/startDate"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="15dp"
+            android:text="Start"
+            android:textSize="15sp"
+            android:backgroundTint="#3E6ECF"
+
+            />
+
+        <Button
+            android:id="@+id/endDate"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="End"
+            android:textSize="15sp"
+            android:backgroundTint="#3E6ECF"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="備註"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_marginTop="25dp"
+        />
+
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:minHeight="40dp"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:autofillHints="creditCardExpirationDate"
+        android:inputType="text"
+        />
+
+    <Button
+        android:layout_width="120dp"
+        android:textSize="15sp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="#3E6ECF"
+        android:minHeight="48dp"
+        android:text="建立"
+        android:id="@+id/submit"
+        />
+
+
+</LinearLayout>
